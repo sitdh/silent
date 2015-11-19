@@ -8,8 +8,8 @@ before_script:
 
 script:
     xctool 
-    -workspace Silence.xcworkspace 
-    -scheme Silence 
+    -workspace Silent.xcworkspace 
+    -scheme Silent 
     -sdk iphonesimulator9.0 
     -destination 'platoform=iOS Simulator, name=iPhone 6'
     clean 
