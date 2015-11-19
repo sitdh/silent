@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A98E79E624C33E57C40585D /* Pods_Silent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6797CBC0B982BF38CAB3C6F /* Pods_Silent.framework */; };
 		AE6E67091BFDC131001A6FBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6E67081BFDC131001A6FBE /* AppDelegate.swift */; };
 		AE6E670B1BFDC131001A6FBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6E670A1BFDC131001A6FBE /* ViewController.swift */; };
 		AE6E670E1BFDC133001A6FBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6E670C1BFDC133001A6FBE /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A6797CBC0B982BF38CAB3C6F /* Pods_Silent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Silent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE6E67051BFDC130001A6FBE /* Silent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Silent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE6E67081BFDC131001A6FBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE6E670A1BFDC131001A6FBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		AE6E67241BFDC138001A6FBE /* SilentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SilentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE6E67281BFDC138001A6FBE /* SilentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilentUITests.swift; sourceTree = "<group>"; };
 		AE6E672A1BFDC138001A6FBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF5A69B9BA4185EA1F0C6B48 /* Pods-Silent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Silent.release.xcconfig"; path = "Pods/Target Support Files/Pods-Silent/Pods-Silent.release.xcconfig"; sourceTree = "<group>"; };
+		EBCFAF8F58637FAAB00B1929 /* Pods-Silent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Silent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Silent/Pods-Silent.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A98E79E624C33E57C40585D /* Pods_Silent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E3FA53FBEE43D5D065B831B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBCFAF8F58637FAAB00B1929 /* Pods-Silent.debug.xcconfig */,
+				DF5A69B9BA4185EA1F0C6B48 /* Pods-Silent.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3F10B119EFB159062C8DE9C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6797CBC0B982BF38CAB3C6F /* Pods_Silent.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AE6E66FC1BFDC12D001A6FBE = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +103,8 @@
 				AE6E671C1BFDC138001A6FBE /* SilentTests */,
 				AE6E67271BFDC138001A6FBE /* SilentUITests */,
 				AE6E67061BFDC130001A6FBE /* Products */,
+				1E3FA53FBEE43D5D065B831B /* Pods */,
+				3F10B119EFB159062C8DE9C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE6E672D1BFDC138001A6FBE /* Build configuration list for PBXNativeTarget "Silent" */;
 			buildPhases = (
+				7DAB1EDDBE34945B29B7D5D2 /* Check Pods Manifest.lock */,
 				AE6E67011BFDC130001A6FBE /* Sources */,
 				AE6E67021BFDC130001A6FBE /* Frameworks */,
 				AE6E67031BFDC130001A6FBE /* Resources */,
+				1153D2783151119F34C3BCB3 /* Embed Pods Frameworks */,
+				683FDF648F0DE19292510B1D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +277,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1153D2783151119F34C3BCB3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Silent/Pods-Silent-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		683FDF648F0DE19292510B1D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Silent/Pods-Silent-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DAB1EDDBE34945B29B7D5D2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AE6E67011BFDC130001A6FBE /* Sources */ = {
@@ -395,6 +470,7 @@
 		};
 		AE6E672E1BFDC138001A6FBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBCFAF8F58637FAAB00B1929 /* Pods-Silent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Silent/Info.plist;
@@ -406,6 +482,7 @@
 		};
 		AE6E672F1BFDC138001A6FBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF5A69B9BA4185EA1F0C6B48 /* Pods-Silent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Silent/Info.plist;
@@ -482,6 +559,7 @@
 				AE6E672F1BFDC138001A6FBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE6E67301BFDC138001A6FBE /* Build configuration list for PBXNativeTarget "SilentTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +568,7 @@
 				AE6E67321BFDC138001A6FBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE6E67331BFDC138001A6FBE /* Build configuration list for PBXNativeTarget "SilentUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +577,7 @@
 				AE6E67351BFDC138001A6FBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
