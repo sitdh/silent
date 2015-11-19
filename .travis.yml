@@ -1,7 +1,11 @@
-osx_image: xcode7.1
+osx_image: xcode7
 sudo: false
-language: swift
+language: objective-c 
 before_install:
     - gem install cocoapods
     - pod setup
     - pod install
+
+xcode_project: Silence.xcworkspace
+xcode_project: Silence
+xcode_sdk: iphoneos9.1
