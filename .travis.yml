@@ -1,6 +1,6 @@
+language: swift
 before_install:
     - sudo gem install cocoapods
     - pod setup
     - pod install
-
 osx_image: xcode7.1
