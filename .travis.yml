@@ -5,7 +5,7 @@ xcode_scheme: Silent
 
 env:
     matrix:
-        - TEST_SDK=iphonesimulator8.4
+        # - TEST_SDK=iphonesimulator8.4
         - TEST_SDK=iphonesimulator9.1
 
 branches:
@@ -13,6 +13,8 @@ branches:
         - master
 
 before_script: 
+    - brew update
+    - brew outdated xctool || brew upgrade xctool
     - pod install
 
 script:
