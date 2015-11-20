@@ -3,11 +3,6 @@ osx_image: xcode7
 xcode_workspace: Silent.xcworkspace
 xcode_scheme: Silent
 
-env:
-    matrix:
-        # - TEST_SDK=iphonesimulator8.4
-        - TEST_SDK=iphonesimulator9.1
-
 branches:
     only:
         - master
@@ -21,7 +16,7 @@ script:
     xctool 
     -workspace Silent.xcworkspace 
     -scheme Silent 
-    -sdk $TEST_SDK 
+    -sdk iphonesimulator 
     test 
     -only SilentTests 
     # xcodebuild -workspace Silent.xcworkspace -scheme Silent -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1' clean test
