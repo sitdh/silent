@@ -1,5 +1,5 @@
 language: objective-c 
-osx_image: xcode7.1
+osx_image: xcode7
 xcode_workspace: Silent.xcworkspace
 xcode_scheme: Silent
 xcode_sdk: iphoneos9.1
@@ -19,12 +19,4 @@ before_script:
     - pod install
 
 script:
-    - xctool 
-    -workspace Silent.xcworkspace 
-    -scheme Silent 
-    clean 
-    build 
-    run-tests 
-    -test-sdk $TEST_SDK 
-    -targetedDeviceFamily 1,2 
-    -only SilentTests 
+    - xctool -workspace Silent.xcworkspace -scheme Silent clean build run-tests -test-sdk $TEST_SDK -targetedDeviceFamily 1,2 -only SilentTests 
