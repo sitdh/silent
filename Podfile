@@ -2,9 +2,8 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'Silent' do
-    pod 'Google'
-    pod 'GoogleSignIn'
-    pod 'Firebase'
+    pod 'FBSDKCoreKit'
+
 end
 
 target 'SilentTests' do
