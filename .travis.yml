@@ -8,15 +8,15 @@ branches:
         - master
 
 before_script: 
-    - brew update
-    - brew outdated xctool || brew upgrade xctool
+    # - brew update
+    # - brew outdated xctool || brew upgrade xctool
     - pod install
 
 script:
-    xctool 
-    -workspace Silent.xcworkspace 
-    -scheme Silent 
-    -sdk iphonesimulator 
-    test 
-    -only SilentTests 
-    # xcodebuild -workspace Silent.xcworkspace -scheme Silent -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1' clean test
+    # xctool 
+    # -workspace Silent.xcworkspace 
+    # -scheme Silent 
+    # test 
+    # -test-sdk iphonesimulator9.1
+    # -only SilentTests 
+    xcodebuild -workspace Silent.xcworkspace -scheme Silent -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1' clean test
