@@ -1,27 +1,30 @@
 language: objective-c 
+osx_image: xcode7.1
+xcode_workspace: Silent.xcworkspace
+xcode_scheme: Silent
+xcode_sdk: iphoneos9.1
 
-osx_image: xcode7
+env:
+    matrix:
+        - TEST_SDK=iphonesimulator8.4
+        - TEST_SDK=iphonesimulator9.1
+        - TEST_SDK=iphonesimulator9.2
+
+branches:
+    only:
+        - master
 
 before_script: 
     - brew update && brew upgrade xctool
     - pod install
 
 script:
-    xctool 
+    - xctool 
     -workspace Silent.xcworkspace 
     -scheme Silent 
-    -sdk iphonesimulator9.0 
-    -destination 'platoform=iOS Simulator, name=iPhone 6'
     clean 
     build 
-    test
-    CODE_SIGN_IDENTITY=""
-    CODE_SIGNING_REQUIRED=NO
-
-branches:
-    only:
-        - master
-
-# xcode_project: Silence.xcworkspace
-# xcode_project: Silence
-# xcode_sdk: iphoneos9.1
+    run-tests 
+    -test-sdk $TEST_SDK 
+    -targetedDeviceFamily 1,2 
+    -only SilentTests 
