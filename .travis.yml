@@ -18,5 +18,5 @@ script:
     -scheme Silent 
     test 
     -test-sdk iphonesimulator9.1
-    -only Sile# ntTests 
+    -only SilentTests 
     # xcodebuild -workspace Silent.xcworkspace -scheme Silent -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1' clean test
