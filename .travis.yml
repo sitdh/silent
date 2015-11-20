@@ -13,7 +13,7 @@ branches:
         - master
 
 before_script: 
-    - brew update && brew upgrade xctool
+    - brew update && brew install xctool
     - pod install
 
 script:
@@ -21,6 +21,5 @@ script:
     -workspace Silent.xcworkspace 
     -scheme Silent 
     -sdk $TEST_SDK 
-    -targetedDeviceFamily 1,2 
     test 
     -only SilentTests 
