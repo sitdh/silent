@@ -19,4 +19,6 @@ script:
     test 
     -test-sdk iphonesimulator9.1
     -only SilentTests 
+    CODE_SIGN_IDENTITY="" 
+    CODE_SIGNING_REQUIRED=NO
     # xcodebuild -workspace Silent.xcworkspace -scheme Silent -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6,OS=9.1' clean test
