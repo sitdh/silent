@@ -16,7 +16,7 @@ script:
     xctool 
     -workspace Silent.xcworkspace 
     -scheme Silent 
-    -destination 'name=iPhone 5,OS=9.0'
+    -destination 'platform=iOS Simulator,name=iPhone 5,OS=9.1'
     test 
     -test-sdk iphonesimulator9.1
     -only SilentTests 
